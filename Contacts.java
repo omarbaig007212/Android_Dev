@@ -23,7 +23,7 @@ public class Contacts {
     public void getDetails()
     {
         System.out.println(" name--> "+this.name+"\n number--> "+this.number
-        +"\n email--> "+this.email+"\n messages--> "+this.messages);
+        +"\n email--> "+this.email);
     }
 
     public String getname()

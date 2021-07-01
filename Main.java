@@ -2,7 +2,7 @@ import java.util.*;
 public class Main {
     public static ArrayList<Contacts> contacts;
     public static Scanner sc;
-    public static int id=0;
+    private static int id=0;
     public static void main(String[] args)
     {
         sc=new Scanner(System.in);
@@ -152,6 +152,7 @@ public class Main {
         for(Contacts c:contacts)
         {
             msg.addAll(c.getmessages());
+            System.out.println(c.getmessages());
         }
         if(msg.size()>0)
         {
@@ -183,7 +184,6 @@ public class Main {
                 if(c.getname().equals(name))
                 {
                     flag=true;
-                    break;
                 }
             }
             if(flag==true)
@@ -201,7 +201,7 @@ public class Main {
                     Message newMsg=new Message(name, text, id);
                     for(Contacts c:contacts)
                     {
-                        if(c.getname()==name)
+                        if(c.getname().equals(name))
                         {
                             ArrayList<Message> newMsgs=c.getmessages();
                             newMsgs.add(newMsg);
