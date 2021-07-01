@@ -165,7 +165,7 @@ public class Main {
         {
             System.out.println("No messages found");
         }
-        Messages();
+        showOptions();
     }
     public static void sendMsg()
     {
@@ -205,10 +205,7 @@ public class Main {
                         {
                             ArrayList<Message> newMsgs=c.getmessages();
                             newMsgs.add(newMsg);
-                            Contacts cc=c;
-                            contacts.remove(c);
-                            cc.setmessages(newMsgs);
-                            contacts.add(cc);
+                            c.setmessages(newMsgs);
                         }
                     }
                 }
